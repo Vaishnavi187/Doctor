@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 id="head">Book an Appointment</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" required>
+      
+      <label for="time">Select Time:</label>
+      <select id="timimg" required>
+        <option >Select slot</option>
+        <option >12:00 AM</option>
+        <option >2:00 AM</option>
+        <option>4:00 PM</option>
+      </select>
+      
+      <button type="submit" id="confirm">Confirm Appointment</button>
+      <button type="button" id="cancel">Cancel</button>
+    </form>
+  </div>
+
+  <script>
+
+         document.getElementById("confirm").addEventListener("click", () => {
+        alert("Appointment booked successfully.");
+         });
+     
+    document.getElementById("cancel").addEventListener("click", () => {
+      alert("Appointment canceled successfully.");
+      window.location.href = "index.html"; 
+    });
+   
+  </script>
+</body>
+</html>
